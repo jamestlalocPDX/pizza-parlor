@@ -10,14 +10,19 @@ body {
   font-style: italic;
 }
 
-#size {
+#pizza {
   float: left;
 }
 
-#toppings {
-  float: right;
+.btn {
+  margin-top: 25px;
 }
 
 .ending-footer {
   text-align: center;
+}
+
+.order-display {
+  float: right;
+  
 }
