@@ -20,60 +20,22 @@
       <label for="pizza-size">Select a size:</label>
       <select class="form-control" id="size">
         <option>-Select-</option>
-        <option value="6">Small ($6)</option>
-        <option value="8">Medium ($8)</option>
-        <option value="10">Large ($10)</option>
-        <option value="15">Family ($15)</option>
+        <option value="Small">Small ($6)</option>
+        <option value="Medium">Medium ($8)</option>
+        <option value="Large">Large ($10)</option>
+        <option value="Family">Family ($15)</option>
       </select>
       <h2>Select your toppings:</h2>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" class="toppings" value="1">
-          Pepperoni ($1)
-        </label>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" class="toppings" value="2">
-          Sausage ($2)
-        </label>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" class="toppings" value="2">
-          Bacon ($2)
-        </label>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" class="toppings" value="3">
-          Pineapple ($3)
-        </label>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" class="toppings" value="1">
-          Spinach ($1)
-        </label>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" class="toppings" value="2">
-          Mushrooms ($2)
-        </label>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" class="toppings" value="1">
-          Red Onions ($1)
-        </label>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" class="toppings" value="2">
-          Banana Peppers ($2)
-        </label>
-      </div>
+        <div class="form=group">
+          <input type="checkbox" name="toppings" value="Peperroni">Pepperoni ($1)<br>
+          <input type="checkbox" name="toppings" value="Sausage">Sausage ($2)<br>
+          <input type="checkbox" name="toppings" value="Bacon">Bacon ($2)<br>
+          <input type="checkbox" name="toppings" value="Pineapple">Pineapple ($3)<br>
+          <input type="checkbox" name="toppings" value="Spinach">Spinach ($1)<br>
+          <input type="checkbox" name="toppings" value="Mushrooms">Mushrooms ($2)<br>
+          <input type="checkbox" name="toppings" value="Red Onions">Red Onions ($1)<br>
+          <input type="checkbox" name="toppings" value="Banana Peppers">Banana Peppers ($2)<br>
+        </div>
       <button type="submit" class="btn btn-danger btn-lg">Order!</button>
     </form>
     <div class="order-display">
