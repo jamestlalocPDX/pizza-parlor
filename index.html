@@ -17,31 +17,14 @@
       <footer class="head-footer">The most far-out, interstellar pizza on the planet!</footer>
     </div>
     <form id="pizza">
-      <h2>Select your size:</h2>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" value="6">
-          Small ($6)
-        </label>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" value="8">
-          Medium ($8)
-        </label>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" value="10">
-          Large ($10)
-        </label>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" value="15">
-          Family ($15)
-        </label>
-      </div>
+      <label for="pizza-size">Select a size:</label>
+      <select class="form-control" id="movie">
+        <option>-Select-</option>
+        <option value="6">Small ($6)</option>
+        <option value="8">Medium ($8)</option>
+        <option value="10">Large ($10)</option>
+        <option value="15">Family ($15)</option>
+      </select>
       <h2>Select your toppings:</h2>
       <div class="checkbox">
         <label>
