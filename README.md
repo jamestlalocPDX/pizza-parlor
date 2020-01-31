@@ -16,7 +16,7 @@ _Welcome to Jimmy's Stellar Pizza! This website is designed to allow any user to
 | Select 1 topping. | Mushrooms | Displayed topping: _Mushrooms_ |
 | Select 2 toppings. | Mushrooms & Pepperoni | Displayed toppings: _Mushrooms & Pepperoni_ |
 | The cost of size is displayed. | Large ($8) | Displayed cost: _$8_ |
-| The cost of toppings is added to size | Mushrooms ($2) & Pepperoni ($3) | Displayed Cost: _$15_ |
+| The cost of toppings is added to size. | Mushrooms ($2) & Pepperoni ($3) | Displayed Cost: _$15_ |
 
 ## **Setup/Installation**
 
