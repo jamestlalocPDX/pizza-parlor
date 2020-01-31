@@ -1,0 +1,23 @@
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.jumbotron {
+  text-align: center;
+}
+
+.head-footer {
+  float: right;
+  font-style: italic;
+}
+
+#size {
+  float: left;
+}
+
+#toppings {
+  float: right;
+}
+
+.ending-footer {
+  text-align: center;
+}
