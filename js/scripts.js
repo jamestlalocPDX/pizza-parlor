@@ -17,7 +17,20 @@ Pizza.prototype.pricesForSize = function() {
   return this.sizeCost = 15;
 }
 }
-
 Pizza.prototype.pricesForToppings = function() {
-  if ()
+  
+}
+
+Pizza.prototype.totalPrice = function() {
+return pricesForSize() + pricesForToppings();
+}
+
+function Toppings() {
+  this.pepperoni = 1;
+  this.sausage = 2;
+  this.pineapple = 3;
+  this.mushrooms = 1;
+  this.spinach = 1;
+  this.redonions = 1;
+  this.bananapeppers = 2;
 }
