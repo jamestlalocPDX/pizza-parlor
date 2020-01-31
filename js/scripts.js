@@ -1,23 +1,23 @@
 //Back-End Logic
-function Pizza(size, toppings) {
+function Pizza(size) {
   this.size = size;
-  this.toppings = {};
+  this.toppings = [];
+  this.sizeCost = 0;
+  this.toppingsCost = 0;
+  this.totalCost = 0;
 }
-Pizza.prototype.calculateCost = function() {
-
+Pizza.prototype.pricesForSize = function() {
+  if (this.size === "Small") {
+  return this.sizeCost = 6;
+} else if (this.size === "Medium") {
+  return this.sizeCost =  8;
+} else if (this.size ==="Large") {
+  return this.sizeCost = 10;
+} else if (this.size === "Family") {
+  return this.sizeCost = 15;
+}
 }
 
-//Front-End Logic
-$(document).ready(function() {
-  $("form#pizza").submit(function(event) {
-    event.preventDefault();
-    var inputtedSize = $("#size").val();
-    $("input:checkbox[name=toppings]:checked").each(function() {
-      var toppings = [];
-      var inputtedToppings = $(this).val();
-      toppings.push(inputtedToppings);
-    });
-    var newPizza = new Pizza(inputtedSize, inputtedToppings)
-    console.log(newPizza);
-  })
-})
+Pizza.prototype.pricesForToppings = function() {
+  if ()
+}
