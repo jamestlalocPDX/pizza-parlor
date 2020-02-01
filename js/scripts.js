@@ -17,9 +17,6 @@ Pizza.prototype.pricesForSize = function() {
   return this.sizeCost = 15;
 }
 }
-Pizza.prototype.pricesForToppings = function() {
-  
-}
 Pizza.prototype.totalPrice = function() {
 return pricesForSize() + pricesForToppings();
 }
@@ -49,7 +46,7 @@ Toppings.prototype.pricesForToppings = function() {
     return this.bananapeppers = 2
   }
 }
-
+//Front-End Logic
 $(document).ready(function() {
   $("#pizza").submit(function(event) {
     event.preventDefault();
