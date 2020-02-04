@@ -1,56 +1,65 @@
 //Back-End Logic
 function Pizza(size, toppings) {
   this.size = size;
-  this.toppings = toppings;
+  this.toppings = [];
   this.sizeCost = 0;
   this.toppingsCost = 0;
   this.totalCost = 0;
 }
-Pizza.prototype.pricesForSize = function() {
+Pizza.prototype.priceForSize = function() {
   if (this.size === "small") {
-  return this.sizeCost += 6;
+    this.sizeCost = 6;
 } else if (this.size === "medium") {
-  return this.sizeCost =  8;
+    this.sizeCost = 8;
 } else if (this.size ==="large") {
-  return this.sizeCost = 10;
+    this.sizeCost = 10;
 } else if (this.size === "family") {
-  return this.sizeCost = 15;
+    this.sizeCost = 15;
+} 
 }
+Pizza.prototype.addToppings = function(topping) {
+  this.toppings.push(topping);
 }
-Pizza.prototype.totalPrice = function() {
-return pricesForSize() + pricesForToppings();
-}
-function Toppings() {
-  this.pepperoni = pepperoni;
-  this.sausage = sausage;
-  this.pineapple = pineapple;
-  this.mushrooms = mushrooms;
-  this.spinach = spinach;
-  this.redonions = redonions;
-  this.bananapeppers = bananapeppers;
-}
-Toppings.prototype.pricesForToppings = function() {
-  if (this.pepperoni === "pepperoni") {
-    return this.pepperoni = 1;
-  } else if (this.sausage === "sausage") {
-    return this.sausage = 2;
-  } else if (this.pineapple === "pineapple") {
-    return this.pineapple = 3;
-  } else if (this.mushrooms === "mushrooms") {
-    return this.mushrooms = 2;
-  } else if (this.spinach === "spinach") {
-    return this.spinach = 1;
-  } else if (this.redonions === "redonions") {
-    return this.redonions = 1;
-  } else if (this.bananapeppers === "bananapeppers") {
-    return this.bananapeppers = 2
+
+Pizza.prototype.priceForToppings = function() {
+  for (var i = 0; i < this.toppings.length; i++) {
+    if (this.toppings === "pepperoni") {
+      this.toppingsCost = 1;
+    } else if (this.toppings === "sausage") {
+      this.toppingsCost = 2;
+    } else if (this.toppings === "pineapple") {
+      this.toppingsCost = 3;
+    } else if (this.toppings === "mushrooms") {
+      this.toppingsCost = 2;
+    } else if (this.toppings === "spinach") {
+      this.toppingscost = 1;
+    } else if (this.toppings === "redonions") {
+      this.toppingsCost = 1;
+    } else if (this.toppings === "bananapeppers") {
+      this.toppingsCost = 2
+    }
   }
 }
+Pizza.prototype.priceForPie = function() {
+  this.totalCost = this.sizeCost + this.toppingsCost
+  return this.totalCost
+}
+
 //Front-End Logic
 $(document).ready(function() {
   $("#pizza").submit(function(event) {
     event.preventDefault();
-    var inputtedSize = $("#pizza").val();
+    var inputtedSize = $("#size").val();
+    $("input:checkbox[name=toppings]:checked").each(function() {
+      var inputtedToppings = $(this).val();
+      Pizza.addToppings.push(inputtedToppings);
+    });
+    
     newPizza = new Pizza (inputtedSize)
+    newPizza.push(inputtedToppings);
+    newPizza.priceForSize();
+    newPizza.priceForToppings();
+    newPizza.priceForPie();
+    console.log(newPizza);
   });
 });
