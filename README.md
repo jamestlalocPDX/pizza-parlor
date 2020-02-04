@@ -14,9 +14,9 @@ _Welcome to Jimmy's Stellar Pizza! This website is designed to allow any user to
 |----------|:-----:|--------|
 | Select the size of pizza. | Large | Displayed size: _Large_ |
 | Select 1 topping. | Mushrooms | Displayed topping: _Mushrooms_ |
-| Select 2 toppings. | Mushrooms & Pepperoni | Displayed toppings: _Mushrooms & Pepperoni_ |
-| The cost of size is displayed. | Large ($8) | Displayed cost: _$8_ |
-| The cost of toppings is added to size. | Mushrooms ($2) & Pepperoni ($3) | Displayed Cost: _$15_ |
+| Select 2 or more toppings. | Mushrooms & Pepperoni | Displayed toppings: _Mushrooms, Pepperoni, etc._ |
+| The cost of size is displayed in the total. | Large($10) | Displayed total: _$10_ |
+| The cost of toppings is added to size. | Large($10) & Mushrooms($2) & Pineapple($3) |  Displayed Cost: _$15_ |
 
 ## **Setup/Installation**
 
@@ -26,16 +26,16 @@ _Welcome to Jimmy's Stellar Pizza! This website is designed to allow any user to
 3. Step three: Use `git clone https://github.com/jonathancarlos21/pizza-parlor` to clone this repository.
 4. Step four: Open the repository.
 5. Step five: Drag the html file into your broswer. 
-6. Step six: Select your pizza size and toppings.
+6. Step six: Select your pizza size and favorite toppings.
 7. Step seven: Click "Order!"
 
 *Option Two:*
 
-Copy and paste `https://jonathancarlos21.github.io/beep-boop` into your address bar.
+Copy and paste `https://jonathancarlos21.github.io/pizza-parlor` into your address bar.
 
 ## **Known Bugs**
 
-There are no known bugs at this time.
+This program in its current state does not add the pepperoni nor the spinach toppings to the total cost of the pizza pie.
 
 ## **Support and contact details**
 
@@ -59,6 +59,6 @@ If you have any questions, comments, or concerns, feel free to contact the conte
 
 ## **License**
 
-Copyright (c) 2020 **_Programming Language Selector_**
+Copyright (c) 2020 **_Jimmy's Pizza Parlor_**
 
 This software is licensed under the MIT license.

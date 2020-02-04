@@ -27,16 +27,18 @@ Pizza.prototype.priceForToppings = function() {
       this.toppingsCost += 1;
     } if (this.toppings.includes("Sausage")) {
       this.toppingsCost += 2;
+    } if (this.toppings.includes("Bacon")) {
+      this.toppingsCost += 2;
     } if (this.toppings.includes("Pineapple")) {
       this.toppingsCost += 3;
     } if (this.toppings.includes("Mushrooms")) {
       this.toppingsCost += 2;
     } if (this.toppings.includes("Spinach")) {
       this.toppingscost += 1;
-    } if (this.toppings.includes("Red onions")) {
+    } if (this.toppings.includes("Red Onions")) {
       this.toppingsCost += 1;
-    } if (this.toppings.includes("Banana peppers")) {
-      this.toppingsCost += 2
+    } if (this.toppings.includes("Banana Peppers")) {
+      this.toppingsCost += 2;
     }
     console.log(this.toppingsCost);
 }
@@ -62,8 +64,8 @@ $(document).ready(function() {
     console.log(newPizza);
 
     $(".order-display").show();
-    $(".showSize").html(inputtedSize);
-    $(".showToppings").html(toppingsArray.join(", "));
-    $(".showTotal").html(newPizza.priceForPie());
+    $(".showSize").text(inputtedSize);
+    $(".showToppings").text(toppingsArray.join(", "));
+    $(".showTotal").text(newPizza.priceForPie());
   });
 });
