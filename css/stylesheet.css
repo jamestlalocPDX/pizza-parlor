@@ -17,11 +17,6 @@ body {
 .btn {
   margin-top: 25px;
 }
-
-.ending-footer {
-  text-align: center;
-}
-
 .order-display {
   display: none;
   float: right;

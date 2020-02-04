@@ -40,7 +40,6 @@ Pizza.prototype.priceForToppings = function() {
     } if (this.toppings.includes("Banana Peppers")) {
       this.toppingsCost += 2;
     }
-    console.log(this.toppingsCost);
 }
 Pizza.prototype.priceForPie = function() {
   this.totalCost = this.sizeCost + this.toppingsCost
@@ -52,16 +51,15 @@ $(document).ready(function() {
     event.preventDefault();
     var inputtedSize = $("#size").val();
     var toppingsArray = [];
-    var newPizza = new Pizza (inputtedSize, toppingsArray)
+    var newPizza = new Pizza (inputtedSize, toppingsArray);
     $("input:checkbox[name=toppings]:checked").each(function() {
       var inputtedToppings = $(this).val();
       newPizza.addToppings(inputtedToppings);
     });
     
     newPizza.priceForSize();
-    newPizza.priceForToppings(toppingsArray);
+    newPizza.priceForToppings();
     newPizza.priceForPie();
-    console.log(newPizza);
 
     $(".order-display").show();
     $(".showSize").text(inputtedSize);
