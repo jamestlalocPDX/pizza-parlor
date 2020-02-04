@@ -23,6 +23,7 @@ body {
 }
 
 .order-display {
+  display: none;
   float: right;
-  
+  text-align:center;
 }
