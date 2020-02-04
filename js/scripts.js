@@ -15,44 +15,47 @@ Pizza.prototype.priceForSize = function() {
     this.sizeCost = 10;
 } else if (this.size === "family") {
     this.sizeCost = 15;
-} 
+} else {
+  alert("Please select a size.")
+}
+}
+Pizza.prototype.addToppings = function(toppings) {
+  this.toppings.push(toppings);
 }
 Pizza.prototype.priceForToppings = function() {
-  for (var i = 0; i < this.toppings.length; i++) {}
-    if (this.toppings === "pepperoni") {
-      this.toppingsCost = 1;
+    if (this.toppings.includes("pepperoni")) {
+      this.toppingsCost += 1;
     } if (this.toppings === "sausage") {
-      this.toppingsCost = 2;
+      this.toppingsCost += 2;
     } if (this.toppings === "pineapple") {
-      this.toppingsCost = 3;
+      this.toppingsCost += 3;
     } if (this.toppings === "mushrooms") {
-      this.toppingsCost = 2;
+      this.toppingsCost += 2;
     } if (this.toppings === "spinach") {
-      this.toppingscost = 1;
+      this.toppingscost += 1;
     } if (this.toppings === "redonions") {
-      this.toppingsCost = 1;
+      this.toppingsCost += 1;
     } if (this.toppings === "bananapeppers") {
-      this.toppingsCost = 2
+      this.toppingsCost += 2
     }
     console.log(this.toppingsCost);
 }
 Pizza.prototype.priceForPie = function() {
   this.totalCost = this.sizeCost + this.toppingsCost
-  return this.totalCost
 }
-
 //Front-End Logic
 $(document).ready(function() {
   $("#pizza").submit(function(event) {
     event.preventDefault();
     var inputtedSize = $("#size").val();
     var toppingsArray = [];
+    var newPizza = new Pizza (inputtedSize, toppingsArray)
+
     $("input:checkbox[name=toppings]:checked").each(function() {
       var inputtedToppings = $(this).val();
-      toppingsArray.push(inputtedToppings);
+      newPizza.addToppings(inputtedToppings);
     });
     
-    newPizza = new Pizza (inputtedSize, toppingsArray)
     newPizza.priceForSize();
     newPizza.priceForToppings();
     newPizza.priceForPie();
