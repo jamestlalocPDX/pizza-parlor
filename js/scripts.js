@@ -23,19 +23,19 @@ Pizza.prototype.addToppings = function(toppings) {
   this.toppings.push(toppings);
 }
 Pizza.prototype.priceForToppings = function() {
-    if (this.toppings.includes("pepperoni")) {
+    if (this.toppings.includes("Pepperoni")) {
       this.toppingsCost += 1;
-    } if (this.toppings === "sausage") {
+    } if (this.toppings.includes("Sausage")) {
       this.toppingsCost += 2;
-    } if (this.toppings === "pineapple") {
+    } if (this.toppings.includes("Pineapple")) {
       this.toppingsCost += 3;
-    } if (this.toppings === "mushrooms") {
+    } if (this.toppings.includes("Mushrooms")) {
       this.toppingsCost += 2;
-    } if (this.toppings === "spinach") {
+    } if (this.toppings.includes("Spinach")) {
       this.toppingscost += 1;
-    } if (this.toppings === "redonions") {
+    } if (this.toppings.includes("Red onions")) {
       this.toppingsCost += 1;
-    } if (this.toppings === "bananapeppers") {
+    } if (this.toppings.includes("Banana peppers")) {
       this.toppingsCost += 2
     }
     console.log(this.toppingsCost);
@@ -57,7 +57,7 @@ $(document).ready(function() {
     });
     
     newPizza.priceForSize();
-    newPizza.priceForToppings();
+    newPizza.priceForToppings(toppingsArray);
     newPizza.priceForPie();
     console.log(newPizza);
 
