@@ -6,6 +6,9 @@ function Pizza(size, toppings) {
   this.toppingsCost = 0;
   this.totalCost = 0;
 }
+Pizza.prototype.addSize = function(size) {
+  this.size = size;
+}
 Pizza.prototype.priceForSize = function() {
   if (this.size === "Small") {
     this.sizeCost = 6;
@@ -43,19 +46,22 @@ Pizza.prototype.priceForToppings = function() {
 }
 Pizza.prototype.priceForPie = function() {
   this.totalCost = this.sizeCost + this.toppingsCost
-  // return this.totalCost
+  return this.totalCost
 }
 //Front-End Logic
 $(document).ready(function() {
   $("#pizza").submit(function(event) {
     event.preventDefault();
+    var newPizza = new Pizza ();
+
     var inputtedSize = $("#size").val();
+    newPizza.addSize(inputtedSize);
     var toppingsArray = [];
-    var newPizza = new Pizza (inputtedSize, toppingsArray);
     $("input:checkbox[name=toppings]:checked").each(function() {
       var inputtedToppings = $(this).val();
-      newPizza.addToppings(inputtedToppings);
+      toppingsArray.push(inputtedToppings);
     });
+    newPizza.addToppings(toppingsArray);
     
     newPizza.priceForSize();
     newPizza.priceForToppings();
@@ -65,5 +71,6 @@ $(document).ready(function() {
     $(".showSize").text(inputtedSize);
     $(".showToppings").text(toppingsArray.join(", "));
     $(".showTotal").text(newPizza.priceForPie());
+    
   });
 });
