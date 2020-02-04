@@ -12,15 +12,15 @@ Pizza.prototype.addSize = function(size) {
 Pizza.prototype.priceForSize = function() {
   if (this.size === "Small") {
     this.sizeCost = 6;
-} else if (this.size === "Medium") {
-    this.sizeCost = 8;
-} else if (this.size ==="Large") {
-    this.sizeCost = 10;
-} else if (this.size === "Family") {
-    this.sizeCost = 15;
-} else {
-  alert("Please select a size.")
-}
+  } else if (this.size === "Medium") {
+      this.sizeCost = 8;
+  } else if (this.size ==="Large") {
+      this.sizeCost = 10;
+  } else if (this.size === "Family") {
+      this.sizeCost = 15;
+  } else {
+    alert("Please select a size.")
+  }
 }
 Pizza.prototype.addToppings = function(toppings) {
   this.toppings = toppings;
