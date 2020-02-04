@@ -26,23 +26,23 @@ Pizza.prototype.addToppings = function(toppings) {
   this.toppings = toppings;
 }
 Pizza.prototype.priceForToppings = function() {
-    if (this.toppings.includes("Pepperoni")) {
-      this.toppingsCost += 1;
-    } if (this.toppings.includes("Sausage")) {
-      this.toppingsCost += 2;
-    } if (this.toppings.includes("Bacon")) {
-      this.toppingsCost += 2;
-    } if (this.toppings.includes("Pineapple")) {
-      this.toppingsCost += 3;
-    } if (this.toppings.includes("Mushrooms")) {
-      this.toppingsCost += 2;
-    } if (this.toppings.includes("Spinach")) {
-      this.toppingscost += 1;
-    } if (this.toppings.includes("Red Onions")) {
-      this.toppingsCost += 1;
-    } if (this.toppings.includes("Banana Peppers")) {
-      this.toppingsCost += 2;
-    }
+  if (this.toppings.includes("Pepperoni")) {
+    this.toppingsCost += 1;
+  } if (this.toppings.includes("Sausage")) {
+    this.toppingsCost += 2;
+  } if (this.toppings.includes("Bacon")) {
+    this.toppingsCost += 2;
+  } if (this.toppings.includes("Pineapple")) {
+    this.toppingsCost += 3;
+  } if (this.toppings.includes("Mushrooms")) {
+    this.toppingsCost += 2;
+  } if (this.toppings.includes("Spinach")) {
+    this.toppingscost += 1;
+  } if (this.toppings.includes("Red Onions")) {
+    this.toppingsCost += 1;
+  } if (this.toppings.includes("Banana Peppers")) {
+    this.toppingsCost += 2;
+  }
 }
 Pizza.prototype.priceForPie = function() {
   this.totalCost = this.sizeCost + this.toppingsCost
