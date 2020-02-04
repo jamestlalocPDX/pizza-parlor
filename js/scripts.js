@@ -43,7 +43,7 @@ Pizza.prototype.priceForToppings = function() {
 }
 Pizza.prototype.priceForPie = function() {
   this.totalCost = this.sizeCost + this.toppingsCost
-  return this.totalCost
+  // return this.totalCost
 }
 //Front-End Logic
 $(document).ready(function() {
