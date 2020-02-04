@@ -71,6 +71,5 @@ $(document).ready(function() {
     $(".showSize").text(inputtedSize);
     $(".showToppings").text(toppingsArray.join(", "));
     $(".showTotal").text(newPizza.priceForPie());
-    
   });
 });
