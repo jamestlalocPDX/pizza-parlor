@@ -23,7 +23,7 @@ Pizza.prototype.priceForSize = function() {
 }
 }
 Pizza.prototype.addToppings = function(toppings) {
-  this.toppings.push(toppings);
+  this.toppings = toppings;
 }
 Pizza.prototype.priceForToppings = function() {
     if (this.toppings.includes("Pepperoni")) {
@@ -52,7 +52,7 @@ Pizza.prototype.priceForPie = function() {
 $(document).ready(function() {
   $("#pizza").submit(function(event) {
     event.preventDefault();
-    var newPizza = new Pizza ();
+    var newPizza = new Pizza();
 
     var inputtedSize = $("#size").val();
     newPizza.addSize(inputtedSize);
